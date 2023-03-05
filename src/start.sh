@@ -1,7 +1,5 @@
 #!/bin/bash
 
-pwd
-ls
 # Starts datomic transactor
 ./bin/transactor -Ddatomic.printConnectionInfo=true config/dev-transactor.properties &
 
