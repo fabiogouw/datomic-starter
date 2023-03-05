@@ -19,6 +19,7 @@ RUN echo DATOMIC HOME: $DATOMIC_HOME
 COPY dev-transactor.properties config/dev-transactor.properties
 RUN sed -i -r "s%\{\{license-key\}\}%${datomic_license}%g" config/dev-transactor.properties
 COPY start.sh start.sh
+RUN chmod 777 start.sh
 ENTRYPOINT ["./start.sh"]
 
 VOLUME $DATOMIC_DATA
