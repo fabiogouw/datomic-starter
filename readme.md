@@ -10,10 +10,10 @@ After cloning the repo, in the terminal using a machine that has Docker installe
 - **your-email** - the e-mail you've used to register in Datomic's web site
 - **downloading-password** - the download password the site provides to you. It's an UUID and it's not your password (the one you've used to register)
 - **datomic_version** - the Datomic version you want to use. It's optional and if not provided, the default value is 1.0.6610
-- **your-license** - the license you've received after registered. It's a multiline string composed of letters and numbers. Don't forget to remove the "\" characters at the end of each line and join the lines into one.
+- **your-license** - the license you've received after registered. It's a multiline string composed of letters and numbers. Don't forget to remove the "\\" characters at the end of each line and join the lines into one.
 
 ``` bash
-docker build -t my-datomic-starter:0.1 --build-arg {{your-email}} --build-arg http_password={{downloading-password}} --build-arg datomic_version={{datomic_version}} --build-arg datomic_license={{your-license}} . 
+docker build -t my-datomic-starter:0.1 --build-arg http_user={{your-email}} --build-arg http_password={{downloading-password}} --build-arg datomic_version={{datomic_version}} --build-arg datomic_license={{your-license}} . 
 ```
 
 To run, you just need to create the container.
